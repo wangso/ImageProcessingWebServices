@@ -4,7 +4,7 @@ RUN apt-get update -y
 RUN apt-get install git -y
 RUN apt-get -y install python-pip
 RUN git clone https://github.com/wangso/ImageProcessingWebServices.git
-RUN cd ImageProcessingWebServices
+WORKDIR ImageProcessingWebServices
 RUN pip install -r requirements.txt
 RUN wget https://wangso-mec.s3.amazonaws.com/NextServer.txt
 ENTRYPOINT ["python"]
