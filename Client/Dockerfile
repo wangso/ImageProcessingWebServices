@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM valian/docker-python-opencv-ffmpeg
 MAINTAINER Songjie Wang "wangso@missouri.edu"
 RUN apt-get update -y
 RUN apt-get install git -y
