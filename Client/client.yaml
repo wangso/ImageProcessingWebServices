@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: imgproc-client
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: imgproc-client
+            tier: frontend
+    template:
+        metadata:
+            labels:
+                app: imgproc-client
+                tier: frontend
+        spec:
+            #hostNetwork: true
+            containers:
+              - name: imgproc-client
+                image: wangso/imgproc-client

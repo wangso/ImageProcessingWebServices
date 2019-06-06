@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: imgproc-server-service
+spec:
+    # type: NodePort
+    ports:
+    - protocol: TCP
+      #nodePort: 31234
+      port: 80
+      targetPort: http
+    selector:
+      app: imgproc-server
+      tier: backend

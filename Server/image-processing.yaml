@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: image-processing
+spec:
+    replicas: 1
+    selector:
+        matchLabels: 
+            app: image-processing
+    template:
+        metadata:
+            labels:
+                app: image-processing
+        spec:
+            hostNetwork: true
+            containers:
+              - name: image-processing
+                image: wangso/image-processing
+                ports:
+                - containerPort: 5000
