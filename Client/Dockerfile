@@ -8,6 +8,7 @@ RUN pip install -r requirements.txt
 RUN apt-get install wget
 RUN pip install requests
 RUN easy_install requests
+RUN rm NextServer.txt
 RUN wget https://wangso-mec.s3.amazonaws.com/NextServer.txt
 ENTRYPOINT ["python"]
-CMD ["client.py"]
+CMD ["client.py", ">> results.txt"]
