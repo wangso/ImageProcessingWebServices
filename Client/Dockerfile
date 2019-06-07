@@ -11,4 +11,4 @@ RUN easy_install requests
 RUN rm NextServer.txt
 RUN wget https://wangso-mec.s3.amazonaws.com/NextServer.txt
 ENTRYPOINT ["python"]
-CMD ["client.py", ">> results.txt"]
+CMD ["client.py"]
