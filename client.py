@@ -41,9 +41,9 @@ while True:
 	currentFPS = 1.0/(time.time() - frameStartTime)
 	FPS.append(currentFPS)
 	print("response = {}, frame = {}, fps = {} ".format(r, frameCount, round(currentFPS, 3)))
-        file = open("output.txt", "w")
-        file.write("response = {}, frame = {}, fps = {} ".format(r, frameCount, round(currentFPS, 3)))
-        file.close
+        file2 = open("output.txt", "w")
+        file2.write("response = {}, frame = {}, fps = {} ".format(r, frameCount, round(currentFPS, 3)))
+        file2.close
 	if r == "<Response [500]>":
 		break
 print("Average FPS = {}".format(round(np.mean(FPS), 3)))
