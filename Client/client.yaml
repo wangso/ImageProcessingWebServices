@@ -18,3 +18,10 @@ spec:
             containers:
               - name: imgproc-client
                 image: wangso/imgproc-client
+                resources:
+                    requests:
+                       cpu: 1000m
+                       memory: 1000Mi
+                    limits:
+                       cpu: 2000m
+                       memory: 3000Mi
