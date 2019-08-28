@@ -18,3 +18,10 @@ spec:
                 image: wangso/image-processing
                 ports:
                 - containerPort: 5000
+                resources:
+                    requests:
+                       cpu: 3000m
+                       memory: 3000Mi
+                    limits:
+                       cpu: 5000m
+                       memory: 5000Mi
